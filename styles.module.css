@@ -1,11 +1,11 @@
 .hello {
   list-style: none;
-  font: 36px Helvetica, Arial, sans-serif;
-  background: #eee;
-  padding: 100px;
+  font: 20px Helvetica, Arial, sans-serif;
+  background: rgb(204, 200, 236);
+  padding: 22px;
   text-align: center;
   transition: 100ms ease-in background;
 }
 .hello:hover {
-  background: #ccc;
+  background: rgb(224, 228, 7);
 }
