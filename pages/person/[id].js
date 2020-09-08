@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
 
@@ -19,13 +20,13 @@ export default function Person() {
   )
 
   if (error) return <div>{error.message}</div>
-  if (!data) return <div>Loading...</div>
+  if (!data) return <div>Carregando...</div>
 
   return (
-    <table>
+    <table bordercolor="#666633">
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Nome</th>
           <th>Height</th>
           <th>Mass</th>
           <th>Hair color</th>
@@ -35,7 +36,7 @@ export default function Person() {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr bgcolor="#ccc8ec">
           <td>{data.name}</td>
           <td>{data.height}</td>
           <td>{data.mass}</td>
@@ -45,6 +46,9 @@ export default function Person() {
           <td>{data.gender}</td>
         </tr>
       </tbody>
+      <Link href="/" as={`/`}>
+          <a>Voltar Menu</a>
+      </Link>
     </table>
   )
 }
