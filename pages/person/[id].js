@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
+import styles from '../../styles.module.css'
 
 const fetcher = async (url) => {
   const res = await fetch(url)
@@ -22,7 +23,7 @@ export default function Person() {
   if (!data) return <div>Loading...</div>
 
   return (
-    <table>
+    <table id={styles.Person}>
       <thead>
         <tr>
           <th>Name</th>

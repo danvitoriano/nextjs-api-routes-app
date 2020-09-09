@@ -1,5 +1,15 @@
 export const people = [
   {
+    id: '0',
+    name: 'Leo Kojima',
+    height: '203',
+    mass: '115',
+    hair_color: 'black',
+    skin_color: 'yellow',
+    eye_color: 'dark brown',
+    gender: 'male',
+  },
+  {
     id: '1',
     name: 'Luke Skywalker',
     height: '172',
