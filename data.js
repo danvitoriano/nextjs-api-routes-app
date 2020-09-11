@@ -8,6 +8,23 @@ export const people = [
     skin_color: 'fair',
     eye_color: 'blue',
     gender: 'male',
+    gallery: [
+      {brand: "tom-clancy-ghost-recon", id: "5cc81f5f6b54a4cd3c0e9cfd"},
+      {brand: "tom-clancys-the-division", id: "5b06a3984e0165fa45ffdcc5"},
+      {brand: "anno-1800", id: "5b647010ef3aa548048c5958"},
+      {brand: "tom-clancys-the-division", id: "5e15ad495cdf9a1ec45ad835"},
+      {brand: "Assassin’s Creed Odyssey", id: "5afda8aa6b54a4271407a875"},
+      {brand: "far-cry-5", id: "591567f6ca1a6460388b4568"},
+      {brand: "for-honor", id: "5bfd4c29ca1a64ea70fe0eff"},
+      {brand: "watch-dogs-2", id: "574d3a8aca1a64fb3b8b4567"},
+      {brand: "the-crew", id: "598c6a3e0c8ee469268b4568"},
+      {brand: "steep", id: "57597f6a0c8ee468458b4567"},
+      {brand: "uno", id: "57c19450ef3aa52a768b4567"},
+      {brand: "watch-dogs", id: "5cec2d5839798c0870c07698"},
+      {brand: "far-cry-6", id: "5ecd2c925cdf9a1528a8c1d1"},
+      {brand: "assassins-creed", id: "5e849c6c5cdf9a21c0b4e731"},
+      {brand: "Hyper Scape", id: "5ed4f98e5cdf9a1528a8c206"}
+    ]
   },
   {
     id: '2',
@@ -18,6 +35,16 @@ export const people = [
     skin_color: 'gold',
     eye_color: 'yellow',
     gender: 'n/a',
+    gallery: [
+      {brand: "tom-clancy-ghost-recon", id: "5cc81f5f6b54a4cd3c0e9cfd"},
+      {brand: "tom-clancys-the-division", id: "5b06a3984e0165fa45ffdcc5"},
+      {brand: "anno-1800", id: "5b647010ef3aa548048c5958"},
+      {brand: "tom-clancys-the-division", id: "5e15ad495cdf9a1ec45ad835"},
+      {brand: "Assassin’s Creed Odyssey", id: "5afda8aa6b54a4271407a875"},
+      {brand: "far-cry-5", id: "591567f6ca1a6460388b4568"},
+      {brand: "for-honor", id: "5bfd4c29ca1a64ea70fe0eff"},
+      {brand: "watch-dogs-2", id: "574d3a8aca1a64fb3b8b4567"},
+    ]
   },
   {
     id: '3',
@@ -28,6 +55,11 @@ export const people = [
     skin_color: 'white, blue',
     eye_color: 'red',
     gender: 'n/a',
+    gallery: [
+      {brand: "far-cry-6", id: "5ecd2c925cdf9a1528a8c1d1"},
+      {brand: "assassins-creed", id: "5e849c6c5cdf9a21c0b4e731"},
+      {brand: "Hyper Scape", id: "5ed4f98e5cdf9a1528a8c206"}
+    ]
   },
   {
     id: '4',
@@ -38,6 +70,10 @@ export const people = [
     skin_color: 'white',
     eye_color: 'yellow',
     gender: 'male',
+    gallery: [
+      {brand: "tom-clancy-ghost-recon", id: "5cc81f5f6b54a4cd3c0e9cfd"},
+      {brand: "tom-clancys-the-division", id: "5b06a3984e0165fa45ffdcc5"},
+    ]
   },
   {
     id: '5',
@@ -48,6 +84,9 @@ export const people = [
     skin_color: 'light',
     eye_color: 'brown',
     gender: 'female',
+    gallery: [
+      {brand: "Assassin’s Creed Odyssey", id: "5afda8aa6b54a4271407a875"},
+    ]
   },
   {
     id: '6',
@@ -58,6 +97,7 @@ export const people = [
     skin_color: 'light',
     eye_color: 'blue',
     gender: 'male',
+    gallery: [],
   },
   {
     id: '7',
@@ -68,6 +108,7 @@ export const people = [
     skin_color: 'light',
     eye_color: 'blue',
     gender: 'female',
+    gallery: [],
   },
   {
     id: '8',
@@ -78,6 +119,7 @@ export const people = [
     skin_color: 'white, red',
     eye_color: 'red',
     gender: 'n/a',
+    gallery: [],
   },
   {
     id: '9',
@@ -88,6 +130,7 @@ export const people = [
     skin_color: 'light',
     eye_color: 'brown',
     gender: 'male',
+    gallery: [],
   },
   {
     id: '10',
@@ -98,5 +141,6 @@ export const people = [
     skin_color: 'fair',
     eye_color: 'blue-gray',
     gender: 'male',
+    gallery: [],
   },
 ]
