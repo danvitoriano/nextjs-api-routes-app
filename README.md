@@ -1,3 +1,7 @@
+# Novas páginas customizadas
+
+Foram criadas duas páginas novas sendo /home e /post/[id], ao selecionar um post na página home ele leva ao conteúdo do post na url /post/[id]. Utilizados conceitos aprendidos em aula sobre rotas, criação de componentes, passagem de parâmetros, etc..
+
 # Basic API routes example
 
 Next.js ships with [API routes](https://nextjs.org/docs/api-routes/introduction) which provides an easy solution to build your own `API`. This example shows how to create multiple `API` endpoints with serverless functions, which can execute independently.
