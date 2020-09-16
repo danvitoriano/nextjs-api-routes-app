@@ -1,5 +1,9 @@
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import useSWR from 'swr'
+import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const fetcher = async (url) => {
   const res = await fetch(url)
@@ -22,29 +26,48 @@ export default function Person() {
   if (!data) return <div>Loading...</div>
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Height</th>
-          <th>Mass</th>
-          <th>Hair color</th>
-          <th>Skin color</th>
-          <th>Eye color</th>
-          <th>Gender</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{data.name}</td>
-          <td>{data.height}</td>
-          <td>{data.mass}</td>
-          <td>{data.hair_color}</td>
-          <td>{data.skin_color}</td>
-          <td>{data.eye_color}</td>
-          <td>{data.gender}</td>
-        </tr>
-      </tbody>
-    </table>
+    <Container>
+      <Row className="justify-content-center">
+        <Col md="8">
+          <h1>Editando o cadastro de <strong>{data.name}</strong></h1>
+          <Form>
+            <Form.Group controlId="name">
+              <Form.Label>Nome</Form.Label>
+              <Form.Control type="text" defaultValue={data.name}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="height">
+              <Form.Label>Altura</Form.Label>
+              <Form.Control type="text" defaultValue={data.height}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="mass">
+              <Form.Label>Peso</Form.Label>
+              <Form.Control type="text" defaultValue={data.mass}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="hair_color">
+              <Form.Label>Cor do cabelo</Form.Label>
+              <Form.Control type="text" defaultValue={data.hair_color}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="skin_color">
+              <Form.Label>Cor de pele</Form.Label>
+              <Form.Control type="text" defaultValue={data.skin_color}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="eye_color">
+              <Form.Label>Cor dos olhos</Form.Label>
+              <Form.Control type="text" defaultValue={data.eye_color}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="gender">
+              <Form.Label>Gênero</Form.Label>
+              <Form.Control type="text" defaultValue={data.gender}></Form.Control>
+            </Form.Group>
+            <p>
+            <Button variant="primary" type="submit">
+              Gravar
+            </Button>
+            &nbsp; &nbsp;
+            <Link href="/">Cancelar</Link>
+            </p>
+            
+          </Form>
+      </Col></Row></Container>
   )
 }

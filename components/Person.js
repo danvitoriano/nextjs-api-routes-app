@@ -1,12 +1,15 @@
 import Link from 'next/link'
-import styles from '../styles.module.css'
 
 export default function Person({ person }) {
   return (
-    <li className={styles.hello}>
-      <Link href="/person/[id]" as={`/person/${person.id}`}>
-        <a>{person.name}</a>
-      </Link>
-    </li>
+    <tr>
+      <td>
+          {person.name}
+      </td>
+      <td>
+        <Link href="/person/[id]" as={`/person/${person.id}`}>Editar</Link>
+      </td>
+      <td>Excluir</td>
+    </tr>
   )
 }
