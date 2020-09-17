@@ -9,7 +9,9 @@ export default function Person({ person }) {
       <td>
         <Link href="/person/[id]" as={`/person/${person.id}`}>Editar</Link>
       </td>
-      <td>Excluir</td>
+      <td>
+        <Link href="/phone/[id]" as={`/phone/${person.id}`}>Contatos</Link>
+      </td>
     </tr>
   )
 }
