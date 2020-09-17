@@ -9,3 +9,12 @@
 .hello:hover {
   background: #ccc;
 }
+
+.logo{
+  position: absolute;
+  top: 8%;
+  right: 44%;
+  font-size: 2em;
+  color: white;
+  text-transform: uppercase;
+}
