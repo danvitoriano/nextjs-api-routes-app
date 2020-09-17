@@ -1,11 +1,7 @@
-.hello {
-  list-style: none;
-  font: 36px Helvetica, Arial, sans-serif;
-  background: #eee;
-  padding: 100px;
-  text-align: center;
-  transition: 100ms ease-in background;
+.paddingTop{
+  padding-top: 50px;
 }
-.hello:hover {
-  background: #ccc;
+
+.marginTop15{
+  margin-top: 15px;
 }
