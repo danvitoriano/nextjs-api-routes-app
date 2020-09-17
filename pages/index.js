@@ -17,6 +17,14 @@ export default function Index() {
       <Link href="/apresentation/">
           <a>Apresentation</a>
         </Link>
+        <br></br>
+        <Link href="/rating/">
+          <a>Vote agora - dê sua nota para os filmes do Starwars</a>
+        </Link>
+        <br></br>
+        <Link href="/avaliacao/">
+          <a>Resultados das pesquisas</a>
+        </Link>
     <ul>
       {data.map((p, i) => (
         <Person key={i} person={p} />
