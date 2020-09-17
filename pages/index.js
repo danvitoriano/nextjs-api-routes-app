@@ -25,6 +25,8 @@ export default function Index() {
           
             <SetName/>
             
+            <hr class="styleHr"></hr>
+            
             <h6 class="marginTop15">Selecione uma categoria de fotos:</h6>
 
             <div class="list-group">
@@ -32,6 +34,8 @@ export default function Index() {
                 <Image key={i} image={p} />
               ))}
             </div>
+            
+            <hr class="styleHr"></hr>
 
             <PersonList/>
           </div>
