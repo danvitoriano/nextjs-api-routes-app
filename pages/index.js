@@ -2,16 +2,16 @@ import useSWR from 'swr'
 import Person from '../components/Person'
 import Tabs from "../components/Tabs/Tabs"
 import Header from "../components/Navbar/Navbar"
+import ModalExample from "../components/Modal/Modal"
 import Sobre from "./sobre"
 import Enredo from "./enredo"
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from 'react';
 
 import "../styles.module.css"
-import "../static/style.css"
-
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -41,6 +41,7 @@ export default function Index() {
         </ul>
        </div> 
      </Tabs> 
+     <ModalExample></ModalExample>
     </div>
   );
   // return (

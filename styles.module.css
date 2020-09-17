@@ -18,3 +18,13 @@
   color: white;
   text-transform: uppercase;
 }
+
+.btn-modal{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
