@@ -10,7 +10,7 @@ const fetcher = async (url) => {
   if (res.status !== 200) {
     throw new Error(data.message)
   }
-  return data
+  return data;
 }
 
 export default function Person() {

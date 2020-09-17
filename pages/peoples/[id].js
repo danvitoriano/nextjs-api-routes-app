@@ -15,7 +15,7 @@ const fetcher = async (url) => {
 export default function Person() {
   const { query } = useRouter()
   const { data, error } = useSWR(
-    () => query.id && `/api/people/${query.id}`,
+    () => query.id && `/api/peoples/${query.id}`,
     fetcher
   )
 
@@ -33,7 +33,8 @@ export default function Person() {
           <th>Skin color</th>
           <th>Eye color</th>
           <th>Gender</th>
-          <th>Gallery</th>
+          <th>Films</th>
+          {/* <th>Gallery</th> */}
         </tr>
       </thead>
       <tbody>
@@ -45,7 +46,8 @@ export default function Person() {
           <td>{data.skin_color}</td>
           <td>{data.eye_color}</td>
           <td>{data.gender}</td>
-          <td>{data.gallery && ( <Link href="/person/[id]/gallery" as={`/person/${data.id}/gallery`}>See gallery</Link>)} </td>
+          <td>{data.films && (<Link key={i} href="/peoples/[id]/films" as={`/peoples/${data.id}/films`}>See gallery</Link>)}</td>
+          {/* <td>{data.films && ( data.films.map(f,i=> <Link key={i} href="/people/[id]/gallery" as={`/people/${data.id}/gallery`}>See gallery</Link>)} </td> */}
         </tr>
       </tbody>
     </table>
