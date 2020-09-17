@@ -23,7 +23,17 @@ export default function Index() {
     fetcher
   )
 
-  if (error) return <div>{error.message}</div>
+  // if (error) return <div>{error.message}</div>
+  if (error) return (
+    <Container>
+      <Row className="justify-content-center">
+          <Col md="8">
+            <p>{error.message}</p>
+            <p><Link href="/">Voltar</Link></p>
+          </Col>
+      </Row>
+    </Container>
+  )
   if (!data) return <div>Loading...</div>
 
     return (

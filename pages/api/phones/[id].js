@@ -7,6 +7,6 @@ export default function personHandler({ query: { id } }, res) {
   if (filtered.length > 0) {
     res.status(200).json(filtered)
   } else {
-    res.status(404).json({ message: `User with id: ${id} not found.` })
+    res.status(404).json({ message: `O usuário com o id ${id} não informou números para contatos.`   })
   }
 }
