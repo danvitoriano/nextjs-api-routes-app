@@ -19,3 +19,23 @@
 .gallery :nth-last-child(){
   clear: both;
 }
+
+.data {
+  display: inline-grid;
+  margin: 4px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: #ccc solid 1px;
+  min-width: 20%;
+}
+
+.label {
+  font-weight: 700;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+.value {
+  margin-bottom: 8px;
+  min-width: 15%;
+}
