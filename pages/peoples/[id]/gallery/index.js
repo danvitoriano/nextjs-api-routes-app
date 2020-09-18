@@ -16,7 +16,7 @@ const fetcher = async (url) => {
 export default function Person() {
   const { query } = useRouter()
   const { data, error } = useSWR(
-    () => query.id && `/api/people/${query.id}/gallery`,
+    () => query.id && `/api/peoples/${query.id}/gallery`,
     fetcher
   )
 

@@ -5,6 +5,7 @@ import Link from 'next/link'
 const fetcher = async (url) => {
   const res = await fetch(url)
   const data = await res.json()
+  console.log(res)
 
   if (res.status !== 200) {
     throw new Error(data.message)
@@ -12,10 +13,11 @@ const fetcher = async (url) => {
   return data
 }
 
-export default function Person() {
-  const { query } = useRouter()
+export default function People() {
+  const { id } = useRouter().query;
+
   const { data, error } = useSWR(
-    () => query.id && `/api/peoples/${query.id}`,
+    () => id && `/api/peoples/${id}`,
     fetcher
   )
 
@@ -46,8 +48,8 @@ export default function Person() {
           <td>{data.skin_color}</td>
           <td>{data.eye_color}</td>
           <td>{data.gender}</td>
-          <td>{data.films && (<Link key={i} href="/peoples/[id]/films" as={`/peoples/${data.id}/films`}>See gallery</Link>)}</td>
-          {/* <td>{data.films && ( data.films.map(f,i=> <Link key={i} href="/people/[id]/gallery" as={`/people/${data.id}/gallery`}>See gallery</Link>)} </td> */}
+          <td>{data.films && (<Link href="/peoples/[id]/films" as={`/peoples/${id}/films`}>See Films</Link>)}</td>
+          {/* <td>{data.films && ( data.films.map(f,i=> <Link key={i} href="/peoples/[id]/gallery" as={`/peoples/${data.id}/gallery`}>See gallery</Link>)} </td> */}
         </tr>
       </tbody>
     </table>
