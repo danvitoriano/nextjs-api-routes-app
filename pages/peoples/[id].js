@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
+import Link from 'next/link'
 
 const fetcher = async (url) => {
   const res = await fetch(url)
@@ -11,10 +12,11 @@ const fetcher = async (url) => {
   return data
 }
 
-export default function Person() {
-  const { query } = useRouter()
+export default function People() {
+  const { id } = useRouter().query;
+
   const { data, error } = useSWR(
-    () => query.id && `/api/people/${query.id}`,
+    () => id && `/api/peoples/${id}`,
     fetcher
   )
 
@@ -32,6 +34,8 @@ export default function Person() {
           <th>Skin color</th>
           <th>Eye color</th>
           <th>Gender</th>
+          <th>Films</th>
+          {/* <th>Gallery</th> */}
         </tr>
       </thead>
       <tbody>
@@ -43,6 +47,8 @@ export default function Person() {
           <td>{data.skin_color}</td>
           <td>{data.eye_color}</td>
           <td>{data.gender}</td>
+          <td>{data.films && (<Link href="/peoples/[id]/films" as={`/peoples/${id}/films`}>See Films</Link>)}</td>
+          {/* <td>{data.films && ( data.films.map(f,i=> <Link key={i} href="/peoples/[id]/gallery" as={`/peoples/${data.id}/gallery`}>See gallery</Link>)} </td> */}
         </tr>
       </tbody>
     </table>
