@@ -1,0 +1,43 @@
+ol, ul{
+  padding: 0;
+}
+
+.tab_list {  
+  background: white;
+  display: flex;
+  color: black;
+  justify-content: center; 
+  padding: 10px;
+  margin: 0;
+}
+  
+  .tab_list_item {
+    background: lightgray;
+    display: inline-block;
+    list-style: none;
+    padding: 0.5rem 0.75rem;
+    margin-left: 15px;
+    border-radius: 15px;
+    min-width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.tab_list_item:hover{
+  background-color: gray;
+}
+
+  .tab_list_active {
+    background-color: lightgray;
+    border: solid #ccc;
+    border-width: 1px 1px 0 1px;
+  }
+
+
+.tab-content{
+  padding: 50px;
+}
+
+.linha-abaixo{
+  border-bottom: 1px solid black;
+}
